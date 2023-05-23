@@ -2,7 +2,7 @@ import React from 'react'
 import omagarden from '../assets/Omagarden.png';
 import school from '../assets/Schooldays.png';
 import recipe from '../assets/Food.png';
-import kotlinApp from '../assets/kotlinapp.png';
+import blog from '../assets/blog.png';
 import play from '../assets/playnLearn.png';
 import cinema from '../assets/cinema.png';
 
@@ -68,17 +68,16 @@ const Experience = () => {
                     </div>
                 </div>
 
-                <div style={{backgroundImage: `url(${kotlinApp})`}}
+                <div style={{backgroundImage: `url(${blog})`}}
                     className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
 
                     {/* Hover effects */}
                     <div className='p-4 opacity-0 group-hover:opacity-100'>
                         <span className='text-center text-1xl text-white'>
-                            A mobile application developed using Kotlin.
-                            OO design and MVVM and observer pattern.
+                            A full stack web application for posting Blogs. Created REST Api using NodeJs and mongodb.
                         </span>
                         <div className='pt-8 text-center'>
-                            <a href="https://github.com/Prabin1500/Parliament-Member-App" target="blank">
+                            <a href="https://github.com/Prabin1500/BlogWebsite" target="blank">
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Code</button>
                             </a>
                         </div>
