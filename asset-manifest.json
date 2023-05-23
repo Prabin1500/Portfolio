@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.6b822996.css",
-    "main.js": "/Portfolio/static/js/main.85e3db11.js",
+    "main.js": "/Portfolio/static/js/main.545a2482.js",
     "static/media/CV.pdf": "/Portfolio/static/media/CV.c4d0a0e5c5c6bb692ec6.pdf",
+    "static/media/blog.png": "/Portfolio/static/media/blog.997b36d1907d1fdcc87e.png",
     "static/media/logo11.png": "/Portfolio/static/media/logo11.1098bbf0c47c00e14ec1.png",
     "static/media/react.png": "/Portfolio/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/node.png": "/Portfolio/static/media/node.952a9ea986dcfa5229ad.png",
@@ -10,7 +11,6 @@
     "static/media/cinema.png": "/Portfolio/static/media/cinema.1defa93f42e86471f948.png",
     "static/media/playnLearn.png": "/Portfolio/static/media/playnLearn.3323af5dbad93718d475.png",
     "static/media/github.png": "/Portfolio/static/media/github.3b9e32903aa89111875d.png",
-    "static/media/kotlinapp.png": "/Portfolio/static/media/kotlinapp.6000031df1cb998dfd41.png",
     "static/media/html.png": "/Portfolio/static/media/html.2ba4fabc69a89a8f71e6.png",
     "static/media/Schooldays.png": "/Portfolio/static/media/Schooldays.1b4d1e76ada8794fcb69.png",
     "static/media/tailwind.png": "/Portfolio/static/media/tailwind.e47ac876b8d4d0bba47a.png",
@@ -20,10 +20,10 @@
     "static/media/javascript.png": "/Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/Portfolio/index.html",
     "main.6b822996.css.map": "/Portfolio/static/css/main.6b822996.css.map",
-    "main.85e3db11.js.map": "/Portfolio/static/js/main.85e3db11.js.map"
+    "main.545a2482.js.map": "/Portfolio/static/js/main.545a2482.js.map"
   },
   "entrypoints": [
     "static/css/main.6b822996.css",
-    "static/js/main.85e3db11.js"
+    "static/js/main.545a2482.js"
   ]
 }
