@@ -4,7 +4,7 @@ import { FaCss3, FaGithub, FaHtml5, FaJsSquare, FaNodeJs, FaReact } from 'react-
 const About = () => {
     return (
       <div name='about' className='w-full bg-[#0a192f] text-gray-300'>
-        <div className='flex flex-col px-12 py-24 justify-center items-center w-full h-full'>
+        <div className='flex flex-col  pb-80 px-12 py-24 justify-center items-center w-full h-full'>
           <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
             <div className='sm:text-left pb-8 pl-4'>
               <p className='text-6xl font-mono inline text-[#08FDD8]'>
