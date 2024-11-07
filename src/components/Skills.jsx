@@ -8,6 +8,10 @@ import Node from '../assets/node.png';
 import GitHub from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
 import Java from '../assets/Java.png';
+import C from '../assets/C++-Logo.png';
+import P from '../assets/Python.png';
+import sql from '../assets/SQL.png';
+import git from '../assets/Git.png'
 
 const Skills = () => {
   return (
@@ -19,7 +23,7 @@ const Skills = () => {
               <p className='py-4 font-mono'>These are the technologies I've worked with.</p>
           </div>
 
-          <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
+          <div className='w-full grid grid-cols-2 sm:grid-cols-6 gap-4 text-center py-8'>
               <div className='shadow-md shadow-[#384c63] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto' src={HTML} alt="HTML icon" />
                   <p className='my-4'>HTML</p>
@@ -51,6 +55,22 @@ const Skills = () => {
               <div className='shadow-md shadow-[#384c63] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto' src={Tailwind} alt="HTML icon" />
                   <p className='my-4'>TAILWIND</p>
+              </div>
+              <div className='shadow-md shadow-[#384c63] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={C} alt="HTML icon" />
+                  <p className='my-4'>C++</p>
+              </div>
+              <div className='shadow-md shadow-[#384c63] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={P} alt="HTML icon" />
+                  <p className='my-4'>Python</p>
+              </div>
+              <div className='shadow-md shadow-[#384c63] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={sql} alt="HTML icon" />
+                  <p className='my-4'>SQL</p>
+              </div>
+              <div className='shadow-md shadow-[#384c63] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={git} alt="HTML icon" />
+                  <p className='my-4'>Git</p>
               </div>
           </div>
       </div>

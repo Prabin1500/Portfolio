@@ -5,6 +5,7 @@ import recipe from '../assets/Food.png';
 import blog from '../assets/blog.png';
 import play from '../assets/playnLearn.png';
 import cinema from '../assets/cinema.png';
+import kasthamandap from '../assets/Kasthamandap.png';
 
 const Experience = () => {
   return (
@@ -116,6 +117,23 @@ const Experience = () => {
                             </a>
                             <a href="https://prabin155.netlify.app/" target="blank">
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Demo</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style={{backgroundImage: `url(${kasthamandap})`}}
+                    className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+
+                    {/* Hover effects */}
+                    <div className='p-4 opacity-0 group-hover:opacity-100'>
+                        <span className='text-1xl text-white'>
+                        A web application that uses Firebase as the database, integrates email as a communication tool, 
+                        and includes an admin web app for efficient management. 
+                        </span>
+                        <div className='pt-8 text-center'>
+                            <a href="https://github.com/bekstha/kasthamandap" target="blank">
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Code</button>
                             </a>
                         </div>
                     </div>

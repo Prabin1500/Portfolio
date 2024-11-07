@@ -10,7 +10,7 @@ const Home = () => {
         <div className='max-w-[1000px] mx-auto px-12 flex flex-col justify-center h-full'>
             <h1 className='text-5xl sm:text-6xl font-mono my-4 text-[#ccd6f6]'>Hi,</h1>
             <h1 className='text-5xl sm:text-6xl font-mono mb-4 text-[#ccd6f6]'>I'm Prabin,</h1>
-            <h2 className='text-5xl sm:text-6xl font-mono text-[#ccd6f6]'>Full Stack Develper</h2>
+            <h2 className='text-5xl sm:text-6xl font-mono text-[#ccd6f6]'>Full Stack Developer</h2>
             <p className='text-[#8892b0] font-mono py-4 max-w-[700px]'>Worked collaboratively with other students in group projects 
             as well as worked on individual coding challanges.
             Focused on building responsive full-stack web applications.
