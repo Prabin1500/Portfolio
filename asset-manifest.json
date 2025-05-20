@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.fc63d8ea.css",
-    "main.js": "/Portfolio/static/js/main.c6dabe87.js",
+    "main.css": "/Portfolio/static/css/main.aad84b35.css",
+    "main.js": "/Portfolio/static/js/main.e245c4a6.js",
     "static/media/Kasthamandap.png": "/Portfolio/static/media/Kasthamandap.c3becedbe6ef5433c598.png",
     "static/media/CV.pdf": "/Portfolio/static/media/CV.c4d0a0e5c5c6bb692ec6.pdf",
     "static/media/blog.png": "/Portfolio/static/media/blog.997b36d1907d1fdcc87e.png",
@@ -24,11 +24,11 @@
     "static/media/C++-Logo.png": "/Portfolio/static/media/C++-Logo.c80f0458d60a42c11110.png",
     "static/media/javascript.png": "/Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/Portfolio/index.html",
-    "main.fc63d8ea.css.map": "/Portfolio/static/css/main.fc63d8ea.css.map",
-    "main.c6dabe87.js.map": "/Portfolio/static/js/main.c6dabe87.js.map"
+    "main.aad84b35.css.map": "/Portfolio/static/css/main.aad84b35.css.map",
+    "main.e245c4a6.js.map": "/Portfolio/static/js/main.e245c4a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc63d8ea.css",
-    "static/js/main.c6dabe87.js"
+    "static/css/main.aad84b35.css",
+    "static/js/main.e245c4a6.js"
   ]
 }
