@@ -16,21 +16,21 @@ const Experience = () => {
                 <p className='py-6'>A small gallery of projects I have done so far.</p>
             </div>
 
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-4'>
 
                 {/* Grid item */}
                 <div style={{backgroundImage: `url(${omagarden})` }}
                     className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
 
                     {/* Hover effects */}
-                    <div className='p-4 opacity-0 group-hover:opacity-80'>
-                        <span className='text-center text-1xl  text-white'>
+                    <div className='p-4 opacity-0 group-hover:opacity-80 transition-opacity duration-300 ease-in-out relative'>
+                        <span className='text-center text-md  text-white'>
                         A mobile application built with React Native that allows 
                         users to upload and share pictures of their beloved plants.
                         </span>
                         <div className='pt-8 text-center'>
                             <a href="https://github.com/anish0123/omaGarden" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Code</button>
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
                             </a>
                         </div>
                     </div>
@@ -41,13 +41,13 @@ const Experience = () => {
 
                     {/* Hover effects */}
                     <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-center text-1xl text-white'>
+                        <span className='text-center text-sm text-white'>
                             A full stack web application for uploading media and can chat with other users.
-                            It is build using JS,HTML and CSS. Backend is implemented using Node and MySQL.
+                            It is build using JS,HTML and CSS. Backend implemented using Node and MySQL.
                         </span>
                         <div className='pt-8 text-center'>
                             <a href="https://github.com/Prabin1500/School-days" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Code</button>
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-sm'> Code</button>
                             </a>
                         </div>
                     </div>
@@ -58,12 +58,12 @@ const Experience = () => {
 
                     {/* Hover effects */}
                     <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-center text-1xl text-white'>
+                        <span className='text-center text-md text-white'>
                            A mobile application developed using JAVA.
                         </span>
                         <div className='pt-8 text-center'>
                             <a href="https://github.com/Prabin1500/RecipeApp" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Code</button>
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
                             </a>
                         </div>
                     </div>
@@ -74,12 +74,12 @@ const Experience = () => {
 
                     {/* Hover effects */}
                     <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-center text-1xl text-white'>
+                        <span className='text-center text-md text-white'>
                             A full stack web application for posting Blogs. Created REST Api using NodeJs and mongodb.
                         </span>
                         <div className='pt-8 text-center'>
                             <a href="https://github.com/Prabin1500/BlogWebsite" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Code</button>
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
                             </a>
                         </div>
                     </div>
@@ -90,13 +90,13 @@ const Experience = () => {
 
                     {/* Hover effects */}
                     <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-1xl text-white'>
+                        <span className='text-md text-white'>
                             A child game mobile application developed using
                             Xcode with Swift programming language.
                         </span>
                         <div className='pt-8 text-center'>
                             <a href="https://github.com/Argier96/PlayNLearn" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Code</button>
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
                             </a>
                         </div>
                     </div>
@@ -107,16 +107,15 @@ const Experience = () => {
 
                     {/* Hover effects */}
                     <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-1xl text-white'>
-                            A child game mobile application developed using
-                            Xcode with Swift programming language.
+                        <span className='text-md text-white'>
+                        Built a movie web app that displays a list of movies with a clean, responsive UI and search functionality.
                         </span>
-                        <div className='pt-8 text-center'>
+                        <div className='pt-8 text-center flex'>
                             <a href="https://github.com/Prabin1500/Cinema" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Code</button>
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
                             </a>
                             <a href="https://prabin155.netlify.app/" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Demo</button>
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Demo</button>
                             </a>
                         </div>
                     </div>
@@ -127,13 +126,13 @@ const Experience = () => {
 
                     {/* Hover effects */}
                     <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-1xl text-white'>
+                        <span className='text-sm text-white'>
                         A web application that uses Firebase as the database, integrates email as a communication tool, 
                         and includes an admin web app for efficient management. 
                         </span>
                         <div className='pt-8 text-center'>
                             <a href="https://github.com/bekstha/kasthamandap" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'> Code</button>
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
                             </a>
                         </div>
                     </div>
