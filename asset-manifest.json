@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.2a515e1d.css",
-    "main.js": "/Portfolio/static/js/main.234146f1.js",
+    "main.css": "/Portfolio/static/css/main.f3fab45b.css",
+    "main.js": "/Portfolio/static/js/main.16b718d4.js",
     "static/media/Kasthamandap.png": "/Portfolio/static/media/Kasthamandap.c3becedbe6ef5433c598.png",
-    "static/media/CV.pdf": "/Portfolio/static/media/CV.c4d0a0e5c5c6bb692ec6.pdf",
+    "static/media/header-bg-color.png": "/Portfolio/static/media/header-bg-color.a4104773e65aebab69b6.png",
     "static/media/blog.png": "/Portfolio/static/media/blog.997b36d1907d1fdcc87e.png",
-    "static/media/logo11.png": "/Portfolio/static/media/logo11.1098bbf0c47c00e14ec1.png",
     "static/media/UserImage.jpg": "/Portfolio/static/media/UserImage.0c1b43e8ca0092f63ca2.jpg",
     "static/media/react.png": "/Portfolio/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/Git.png": "/Portfolio/static/media/Git.34eb9f6c195fb3264449.png",
@@ -25,11 +24,11 @@
     "static/media/C++-Logo.png": "/Portfolio/static/media/C++-Logo.c80f0458d60a42c11110.png",
     "static/media/javascript.png": "/Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/Portfolio/index.html",
-    "main.2a515e1d.css.map": "/Portfolio/static/css/main.2a515e1d.css.map",
-    "main.234146f1.js.map": "/Portfolio/static/js/main.234146f1.js.map"
+    "main.f3fab45b.css.map": "/Portfolio/static/css/main.f3fab45b.css.map",
+    "main.16b718d4.js.map": "/Portfolio/static/js/main.16b718d4.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a515e1d.css",
-    "static/js/main.234146f1.js"
+    "static/css/main.f3fab45b.css",
+    "static/js/main.16b718d4.js"
   ]
 }
