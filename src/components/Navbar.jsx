@@ -55,7 +55,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                             style={{
                                 fontFamily: "'Allura', cursive",
                                 fontSize: '4rem',
-                                fill: isDarkMode ? '#000000' : '#2F4F4F',
+                                fill: isDarkMode ? '#ffffff' : '#2F4F4F',
                                 fontWeight: 'normal',
                                 letterSpacing: '1px',
                                 transition: 'fill 0.3s ease'

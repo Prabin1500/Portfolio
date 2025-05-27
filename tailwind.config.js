@@ -23,7 +23,7 @@ module.exports = {
       }
     },
   },
-  darkMode: 'selector',
+  darkMode: 'class',
   plugins: [],
 };
 
