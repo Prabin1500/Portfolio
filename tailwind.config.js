@@ -19,11 +19,11 @@ module.exports = {
         'white': '4px 4px 0 #fff'
       },
       gridTemplateColumns: {
-        'auto': 'repeat(auto-fit, minmax(350px, 1fr))'
+        'auto': 'repeat(auto-fit, minmax(300px, 1fr))'
       }
     },
   },
   darkMode: 'selector',
   plugins: [],
-}
+};
 

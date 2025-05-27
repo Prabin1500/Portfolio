@@ -102,6 +102,33 @@ export const assets = {
     schooldays
 };
 
+export const timelineData = [
+  {
+    title: "Intern / Full Stack Developer",
+    location: "Espoo, FI",
+    company: "KivaPix",
+    duration: "Dec 2024 - March 2025",
+    tasks: [
+      "Developed a responsive web application to manage events using React.js and Tailwind CSS.",
+      "Collaborated with a team of 3 to implement a RESTful API, ensuring seamless data flow between the frontend and backend.",
+      "Participated in code review and feedback, improving code quality and development efficiency.",
+      "Optimised database query in Firebase, reducing the response time by 15%.",
+    ]
+  },
+  {
+    title: "Lab Technician",
+    location: "Espoo, FI",
+    company: "Microsoft Hololens",
+    duration: "2021 - 2024",
+    tasks: [
+      "Collaborated with engineering teams to troubleshoot hardware and software issues during production.",
+      "Maintained detailed records of test results, assembly steps, and device performance.",
+      "Implemented quality control measures to meet the microsoft's standard.",
+      "Supported production flow by handling component inventory, setup, and maintenance of lab equipment."
+    ]
+  }
+];
+
 export const workData = [
     {
         title: 'Blog Website',

@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 import downloadIcon from '../assets/download-icon.png'
 import rightArrowWhite from '../assets/right-arrow-white.png'
 
-const Home = () => {
+const Header = () => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen scroll-mt-20 flex flex-col items-center justify-center gap-4'>
         <motion.div
@@ -73,4 +73,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Header

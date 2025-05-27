@@ -1,10 +1,3 @@
-import cinema from '../assets/cinema.png';
-import blog from '../assets/blog.png';
-import restaurant from '../assets/Kasthamandap.png';
-import omagarden from '../assets/Omagarden.png';
-import playnlearn from '../assets/playnLearn.png';
-import recipe from '../assets/Food.png';
-import schooldays from '../assets/Schooldays.png';
 import { workData } from '../assets/assets';
 
 const Project = () => {
@@ -44,7 +37,7 @@ const Project = () => {
                     {/* Overlay with description */}
                     <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100
                         transition-all duration-700 p-4 flex flex-col justify-between transform scale-0 group-hover:scale-100 origin-center">
-                        <div className="mb-4">
+                        <div className="mb-2">
                             <p className="text-white text-sm md:text-base">
                             {project.description}
                             </p>
@@ -69,11 +62,11 @@ const Project = () => {
 
                         <div className="flex gap-3 p-2">
                             <a href={project.liveUrl} target='_blank' className="flex-1 bg-white text-gray-900
-                                 hover:bg-gray-100 text-center py-2 px-4 rounded-lg text-sm font-medium transition-colors">
+                                 hover:bg-gray-100 text-center py-2 px-2 rounded-lg text-sm font-medium transition-colors">
                             Live Demo
                             </a>
                             <a href={project.url} target='_blank' className="flex-1 bg-transparent border border-white 
-                                text-white hover:bg-white/10 text-center py-2 px-4 rounded-lg text-sm font-medium transition-colors">
+                                text-white hover:bg-white/10 text-center py-2 px-2 rounded-lg text-sm font-medium transition-colors">
                             View Code
                             </a>
                         </div>
