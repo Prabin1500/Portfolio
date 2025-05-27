@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.74dbf0c0.css",
-    "main.js": "/Portfolio/static/js/main.0201b4be.js",
+    "main.css": "/Portfolio/static/css/main.c9bdfde1.css",
+    "main.js": "/Portfolio/static/js/main.d03e4efe.js",
     "static/media/Kasthamandap.png": "/Portfolio/static/media/Kasthamandap.c3becedbe6ef5433c598.png",
+    "static/media/Android_Studio.png": "/Portfolio/static/media/Android_Studio.8876e574b56d0e1bf4fb.png",
     "static/media/header-bg-color.png": "/Portfolio/static/media/header-bg-color.a4104773e65aebab69b6.png",
     "static/media/blog.png": "/Portfolio/static/media/blog.997b36d1907d1fdcc87e.png",
     "static/media/UserImage.jpg": "/Portfolio/static/media/UserImage.0c1b43e8ca0092f63ca2.jpg",
@@ -23,11 +24,11 @@
     "static/media/C++-Logo.png": "/Portfolio/static/media/C++-Logo.c80f0458d60a42c11110.png",
     "static/media/javascript.png": "/Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/Portfolio/index.html",
-    "main.74dbf0c0.css.map": "/Portfolio/static/css/main.74dbf0c0.css.map",
-    "main.0201b4be.js.map": "/Portfolio/static/js/main.0201b4be.js.map"
+    "main.c9bdfde1.css.map": "/Portfolio/static/css/main.c9bdfde1.css.map",
+    "main.d03e4efe.js.map": "/Portfolio/static/js/main.d03e4efe.js.map"
   },
   "entrypoints": [
-    "static/css/main.74dbf0c0.css",
-    "static/js/main.0201b4be.js"
+    "static/css/main.c9bdfde1.css",
+    "static/js/main.d03e4efe.js"
   ]
 }
