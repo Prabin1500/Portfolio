@@ -1,6 +1,7 @@
 import { assets } from '../assets/assets';
-import { useState } from 'react'
-import { motion } from "motion/react"
+import { useState } from 'react';
+import { motion } from "framer-motion";
+import { FiMail, FiPhone, FiMapPin, FiClock } from "react-icons/fi";
 
 const Contact = () => {
     const [result, setResult] = useState("");
@@ -10,95 +11,190 @@ const Contact = () => {
         setResult("Sending....");
         const formData = new FormData(event.target);
 
-    formData.append("access_key", "d1ea99d9-a79d-4893-a34e-b78770e8bf82");
+        formData.append("access_key", "d1ea99d9-a79d-4893-a34e-b78770e8bf82");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
 
-    const data = await response.json();
+        const data = await response.json();
 
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
-    }
-  };
-  return (
-    <motion.div 
-      initial={{opacity: 0}}
-      whileInView={{opacity: 1}}
-      transition={{duration: 1}}
-      id='contact' 
-      className='w-full px-[12%] py-10 mb-32 scroll-mt-20 dark:bg-none'>
-        <div className='flex flex-col items-center justify-center'>
-          <motion.h2 
-            initial={{y: -20, opacity: 0}}
-            whileInView={{y: 0, opacity: 1}}
-            transition={{delay:0.3, duration: 1}}
-            className='text-center text-5xl font-Ovo mx-auto border-b-4 border-b-orange-300 dark:text-[#08FDD8] dark:border-b-[#08FDD8]'>
-            Connect with me
-          </motion.h2>
-          <motion.p 
-            initial={{opacity: 0}}
-            whileInView={{opacity: 1}}
-            transition={{delay:0.7, duration: 0.5}}
-            className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-              I'd love to hear from you.  If you have any questions or concern, feel free to use the form below.
-          </motion.p>
-        </div>
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
+    };
 
-        <motion.form 
-          initial={{opacity: 0}}
-          whileInView={{opacity: 1}}
-          transition={{delay:0.9, duration: 1}}
-          className='max-w-2xl mx-auto' onSubmit={onSubmit}>
-            <div className='grid grid-cols-auto gap-6 mt-10 mb-8'>
-                <motion.input 
-                  initial={{x: -50, opacity: 0}}
-                  whileInView={{x: 0, opacity: 1}}
-                  transition={{delay:0.3, duration: 0.8}}
-                  type='text' 
-                  placeholder='Enter your name' 
-                  required 
-                  name='name'
-                  className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90'/>
-                
-                <motion.input 
-                  initial={{x: 50, opacity: 0}}
-                  whileInView={{x: 0, opacity: 1}}
-                  transition={{delay:0.5, duration: 0.8}}
-                  type='email' 
-                  placeholder='Enter your email' 
-                  required 
-                  name='email'
-                  className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90'/>
+    return (
+        <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            id='contact' 
+            className='w-full px-[5%] lg:px-[10%] py-20 mb-32 scroll-mt-20 dark:bg-none'
+        >
+            <div className='flex flex-col items-center justify-center mb-16'>
+                <motion.h2 
+                    initial={{ y: -20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.3, duration: 1 }}
+                    className='text-center text-4xl md:text-5xl font-Ovo mx-auto pb-2 border-b-4 border-b-orange-300 dark:text-[#08FDD8] dark:border-b-[#08FDD8]'
+                >
+                    Get In Touch
+                </motion.h2>
+                <motion.p 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.7, duration: 0.5 }}
+                    className='text-center max-w-2xl mx-auto mt-5 font-Ovo text-xl text-gray-600 dark:text-gray-300'
+                >
+                    Have a project in mind or want to discuss opportunities? Feel free to reach me out!
+                </motion.p>
             </div>
-            <motion.textarea 
-              initial={{y: 100, opacity: 0}}
-              whileInView={{y: 0, opacity: 1}}
-              transition={{delay:0.7, duration: 0.8}}
-              rows={6} 
-              placeholder='Enter your message' 
-              required 
-              name='message'
-              className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90'></motion.textarea>
-            
-            <motion.button 
-              whileHover={{scale: 1.05}}
-              transition={{duration: 0.3}}
-              type='submit' className='py-3 px-8 w-max flex items-center justify-between gap-2
-             bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover'>
-                Submit
-                <img src={assets.right_arrow_white} alt='' className='w-4'/>
-            </motion.button>
-            <p className='w-4'>{result}</p>
-        </motion.form>
-    </motion.div>
-  )
-}
 
-export default Contact
+            <div className='flex flex-col lg:flex-row gap-12'>
+                {/* Contact Form - Left Side */}
+                <motion.div 
+                    initial={{ x: -50, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                    className='w-full lg:w-1/2'
+                >
+                    <form onSubmit={onSubmit} className='bg-white dark:bg-darkHover/20 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-6'>
+                            <div>
+                                <label htmlFor="name" className='block mb-2 font-medium text-gray-700 dark:text-gray-300'>Name</label>
+                                <input 
+                                    type='text' 
+                                    id='name'
+                                    placeholder='John Doe' 
+                                    required 
+                                    name='name'
+                                    className='w-full p-3 outline-none border border-gray-300 rounded-lg bg-white dark:bg-darkHover/30 dark:border-gray-600 focus:ring-2 focus:ring-orange-300 dark:focus:ring-[#08FDD8] transition-all'
+                                />
+                            </div>
+                            
+                            <div>
+                                <label htmlFor="email" className='block mb-2 font-medium text-gray-700 dark:text-gray-300'>Email</label>
+                                <input 
+                                    type='email' 
+                                    id='email'
+                                    placeholder='john@example.com' 
+                                    required 
+                                    name='email'
+                                    className='w-full p-3 outline-none border border-gray-300 rounded-lg bg-white dark:bg-darkHover/30 dark:border-gray-600 focus:ring-2 focus:ring-orange-300 dark:focus:ring-[#08FDD8] transition-all'
+                                />
+                            </div>
+                        </div>
+                        
+                        <div className='mb-6'>
+                            <label htmlFor="message" className='block mb-2 font-medium text-gray-700 dark:text-gray-300'>Message</label>
+                            <textarea 
+                                id='message'
+                                rows={6} 
+                                placeholder='Hello, I would like to discuss...' 
+                                required 
+                                name='message'
+                                className='w-full p-4 outline-none border border-gray-300 rounded-lg bg-white dark:bg-darkHover/30 dark:border-gray-600 focus:ring-2 focus:ring-orange-300 dark:focus:ring-[#08FDD8] transition-all'
+                            ></textarea>
+                        </div>
+                        
+                        <motion.button 
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.98 }}
+                            transition={{ duration: 0.2 }}
+                            type='submit' 
+                            className='py-3 px-8 w-full flex items-center justify-center gap-2 bg-gradient-to-r from-orange-400 to-orange-500 text-white rounded-lg hover:from-orange-500 hover:to-orange-600 transition-all shadow-lg dark:from-[#08FDD8] dark:to-[#00B4B4] dark:hover:from-[#00B4B4] dark:hover:to-[#08FDD8]'
+                        >
+                            Send Message
+                            <img src={assets.right_arrow_white} alt='' className='w-4'/>
+                        </motion.button>
+                        
+                        {result && (
+                            <p className={`mt-4 text-center ${result.includes("Successfully") ? "text-green-500" : "text-orange-500 dark:text-[#08FDD8]"}`}>
+                                {result}
+                            </p>
+                        )}
+                    </form>
+                </motion.div>
+
+                {/* Contact Info - Right Side */}
+                <motion.div 
+                    initial={{ x: 50, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className='w-full lg:w-1/2'
+                >
+                    <div className='bg-white dark:bg-darkHover/20 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 h-full flex flex-col justify-center'>
+                        <h3 className='text-2xl font-bold mb-6 text-gray-800 dark:text-white'>Contact Information</h3>
+                        
+                        <div className='space-y-6'>
+                            <div className='flex items-start gap-4'>
+                                <div className='p-3 bg-orange-100 dark:bg-[#08FDD8]/10 rounded-full'>
+                                    <FiMail className='text-orange-500 dark:text-[#08FDD8] text-xl' />
+                                </div>
+                                <div>
+                                    <h4 className='font-medium text-gray-600 dark:text-gray-300'>Email</h4>
+                                    <a href="mailto:your.email@example.com" className='text-gray-800 dark:text-white hover:text-orange-500 dark:hover:text-[#08FDD8] transition-colors'>
+                                        dhakalprabin7@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div className='flex items-start gap-4'>
+                                <div className='p-3 bg-orange-100 dark:bg-[#08FDD8]/10 rounded-full'>
+                                    <FiPhone className='text-orange-500 dark:text-[#08FDD8] text-xl' />
+                                </div>
+                                <div>
+                                    <h4 className='font-medium text-gray-600 dark:text-gray-300'>Phone</h4>
+                                    <a href="tel:+1234567890" className='text-gray-800 dark:text-white hover:text-orange-500 dark:hover:text-[#08FDD8] transition-colors'>
+                                        +358-449541977
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div className='flex items-start gap-4'>
+                                <div className='p-3 bg-orange-100 dark:bg-[#08FDD8]/10 rounded-full'>
+                                    <FiMapPin className='text-orange-500 dark:text-[#08FDD8] text-xl' />
+                                </div>
+                                <div>
+                                    <h4 className='font-medium text-gray-600 dark:text-gray-300'>Location</h4>
+                                    <p className='text-gray-800 dark:text-white'>
+                                        Espoo, Finland
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div className='mt-8 pt-6 border-t border-gray-200 dark:border-gray-700'>
+                            <h4 className='font-medium text-gray-600 dark:text-gray-300 mb-3'>Connect with me</h4>
+                            <div className='flex gap-4'>
+                                {['linkedin', 'github', 'twitter'].map((social) => (
+                                    <a 
+                                        key={social} 
+                                        href="#" 
+                                        className='p-2 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-orange-100 dark:hover:bg-[#08FDD8]/10 transition-colors'
+                                        aria-label={social}
+                                    >
+                                        <img 
+                                            src={assets[`${social}_icon`]} 
+                                            alt={social} 
+                                            className='w-5 h-5 dark:invert'
+                                        />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+            </div>
+        </motion.div>
+    );
+};
+
+export default Contact;

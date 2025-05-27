@@ -10,6 +10,7 @@ import closeWhite from '../assets/close-white.png';
 import closeBlack from '../assets/close-black.png';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs' 
+import resume from '../assets/Resume-prabin.pdf';
 
 const Navbar = ({isDarkMode, setIsDarkMode}) => {
     const [isScroll, setIsScroll] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
     <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>
         <img src={bgheader} alt='header-bg' className='w-full' />
     </div>
-      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 
+      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[4%] py-4 flex items-center justify-between z-50 
         ${isScroll ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-md dark:bg-darkTheme dark:shadow-white/20' : ''}`}>
                 <a href='#' className='cursor-pointer'>
                     <svg 
@@ -65,8 +66,8 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                         </text>
                     </svg>
                 </a>
-        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full 
-            px-12 py-3 ${isScroll ? '' : 'bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent'}`}>
+        <ul className={`hidden md:flex items-center gap-2 lg:gap-6 rounded-full 
+            px-6 py-3 ${isScroll ? '' : 'bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent'}`}>
             <li><a className='font-Ovo' href='#top'>Home</a></li>
             <li><a className='font-Ovo' href='#about'>About</a></li>
             <li><a className='font-Ovo' href='#projects'>Projects </a></li>
@@ -107,21 +108,21 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             <ul>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-500'>
                     <a className='flex justify-between items-center w-full text-white font-Ovo gap-2'
-                    href="https://www.linkedin.com/in/prabin-dhakal7/" target="blank">
+                    href="https://www.linkedin.com/in/prabin-dhakal7/" target="_blank">
                         LinkedIn <FaLinkedin size={30}/>
                     </a>
                 </li>
 
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
                     <a className='flex justify-between items-center w-full text-white  font-Ovo gap-2'
-                    href="https://github.com/Prabin1500" target="blank">
+                    href="https://github.com/Prabin1500" target="_blank">
                         Github <FaGithub size={30}/>
                     </a>
                 </li>
 
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
                     <a className='flex justify-between items-center w-full text-white font-Ovo'
-                    href="/PrabinDhakalResume.pdf"  target="blank" rel="noopener noreferrer">
+                    href={resume}  target="_blank" rel="noopener noreferrer">
                         Resume <BsFillPersonLinesFill size={30}/>
                     </a>
 

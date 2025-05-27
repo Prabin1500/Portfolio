@@ -11,15 +11,15 @@ import Skills from "./components/Skills";
 import Layout from "./components/layout";
 
 function App() {
-    const [isDarkMode, setIsDarkMode] = useState(true);
-
-    useEffect(() => {
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark').matches)) {
-        setIsDarkMode(true)
-      }else {
-        setIsDarkMode(false)
-      }
-    }, [])
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Initialize based on localStorage or system preference
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.theme;
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return savedTheme ? savedTheme === 'dark' : systemPrefersDark;
+    }
+    return false; 
+  });
 
     useEffect(() => {
       if(isDarkMode) {
