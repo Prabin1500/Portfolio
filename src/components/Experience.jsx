@@ -1,147 +1,94 @@
-import React from 'react'
-import omagarden from '../assets/Omagarden.png';
-import school from '../assets/Schooldays.png';
-import recipe from '../assets/Food.png';
-import blog from '../assets/blog.png';
-import play from '../assets/playnLearn.png';
-import cinema from '../assets/cinema.png';
-import kasthamandap from '../assets/Kasthamandap.png';
+import React from 'react';
+import { motion } from "motion/react"
 
-const Experience = () => {
+const timelineData = [
+  {
+    title: "Intern / Full Stack Developer",
+    location: "Espoo, FI",
+    company: "KivaPix",
+    duration: "Dec 2024 - March 2025",
+    tasks: [
+      "Developed a responsive web application to manage events using React.js and Tailwind CSS.",
+      "Collaborated with a team of 3 to implement a RESTful API, ensuring seamless data flow between the frontend and backend.",
+      "Participated in code review and feedback, improving code quality and development efficiency.",
+      "Optimised database query in Firebase, reducing the response time by 15%.",
+    ]
+  },
+  {
+    title: "Lab Technician",
+    location: "Espoo, FI",
+    company: "Microsoft Hololens",
+    duration: "2021 - 2024",
+    tasks: [
+      "Collaborated with engineering teams to troubleshoot hardware and software issues during production.",
+      "Maintained detailed records of test results, assembly steps, and device performance.",
+      "Implemented quality control measures to meet the microsoft's standard.",
+      "Supported production flow by handling component inventory, setup, and maintenance of lab equipment."
+    ]
+  }
+];
+
+const Experience = ({isDarkMode}) => {
   return (
-    <div name='experience' className='w-full text-gray-300 bg-[#0a192f]'>
-        <div className='max-w-[1000px] mx-auto px-12 py-24 flex flex-col justify-center w-full h-full'>
-            <div className='pb-4 font-mono'>
-                <p className='text-6xl inline text-[#08FDD8]'>My Portfolio</p>
-                <p className='py-6'>A small gallery of projects I have done so far.</p>
-            </div>
+    <motion.div 
+      initial={{opacity: 0}}
+      whileInView={{opacity:1}}
+      transition={{duration: 1}}
+      id='experience' className="w-full px-[12%] py-10 mb-32 scroll-mt-20 flex flex-col justify-center">
+      <motion.h2 
+        initial={{opacity: 0, y:-20}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration: 0.5, delay:0.3}}
+        className='text-center text-6xl font-Ovo mx-auto border-b-4 border-b-orange-300 dark:text-[#08FDD8] dark:border-b-[#08FDD8]'>
+        Work Experience
+      </motion.h2>
+      {timelineData.map((item, index) => (
+        <motion.div key={index} className="flex relative py-10">
+          {/* Timeline line */}
+          <div className="absolute h-[calc(100%-5rem)] w-0.5 bg-gray-200 left-2.5 top-18" />
+          
+          {/* Dot */}
+          <div className="relative">
+            <div className={`w-6 h-6 rounded-full border-4 border-green-500 bg-white z-10`} />
+          </div>
 
-            <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-4'>
-
-                {/* Grid item */}
-                <div style={{backgroundImage: `url(${omagarden})` }}
-                    className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-
-                    {/* Hover effects */}
-                    <div className='p-4 opacity-0 group-hover:opacity-80 transition-opacity duration-300 ease-in-out relative'>
-                        <span className='text-center text-md  text-white'>
-                        A mobile application built with React Native that allows 
-                        users to upload and share pictures of their beloved plants.
-                        </span>
-                        <div className='pt-8 text-center'>
-                            <a href="https://github.com/anish0123/omaGarden" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
-                            </a>
-                        </div>
-                    </div>
+          {/* Content Card */}
+          <div 
+            className="flex-1 pl-6">
+            <motion.div  
+              initial={{ x:100, opacity: 0 }}
+              whileInView={{x:0, opacity:1}}
+              transition={{duration: 1.0, delay: 0.5}} 
+              className="p-6 rounded-lg shadow-xl border border-gray-100">
+              <div className='flex-cols sm:flex items-center justify-between'> 
+                <h3 className="flex items-center gap-2 text-xl font-semibold font-Ovo dark:text-white">
+                  {item.title}
+                </h3>
+                {/* Date */}
+                <div className="flex items-center w-fit h-auto p-3 text-right bg-green-500 rounded-xl">
+                  <p className="text-sm font-Ovo dark:text-white">{item.duration}</p>
                 </div>
-
-                <div style={{backgroundImage: `url(${school})`}}
-                    className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-
-                    {/* Hover effects */}
-                    <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-center text-sm text-white'>
-                            A full stack web application for uploading media and can chat with other users.
-                            It is build using JS,HTML and CSS. Backend implemented using Node and MySQL.
-                        </span>
-                        <div className='pt-8 text-center'>
-                            <a href="https://github.com/Prabin1500/School-days" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-sm'> Code</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div style={{backgroundImage: `url(${recipe})`}}
-                    className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-
-                    {/* Hover effects */}
-                    <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-center text-md text-white'>
-                           A mobile application developed using JAVA.
-                        </span>
-                        <div className='pt-8 text-center'>
-                            <a href="https://github.com/Prabin1500/RecipeApp" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div style={{backgroundImage: `url(${blog})`}}
-                    className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-
-                    {/* Hover effects */}
-                    <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-center text-md text-white'>
-                            A full stack web application for posting Blogs. Created REST Api using NodeJs and mongodb.
-                        </span>
-                        <div className='pt-8 text-center'>
-                            <a href="https://github.com/Prabin1500/BlogWebsite" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div style={{backgroundImage: `url(${play})`}}
-                    className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-
-                    {/* Hover effects */}
-                    <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-md text-white'>
-                            A child game mobile application developed using
-                            Xcode with Swift programming language.
-                        </span>
-                        <div className='pt-8 text-center'>
-                            <a href="https://github.com/Argier96/PlayNLearn" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div style={{backgroundImage: `url(${cinema})`}}
-                    className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-
-                    {/* Hover effects */}
-                    <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-md text-white'>
-                        Built a movie web app that displays a list of movies with a clean, responsive UI and search functionality.
-                        </span>
-                        <div className='pt-8 text-center flex'>
-                            <a href="https://github.com/Prabin1500/Cinema" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
-                            </a>
-                            <a href="https://prabin155.netlify.app/" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Demo</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div style={{backgroundImage: `url(${kasthamandap})`}}
-                    className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-
-                    {/* Hover effects */}
-                    <div className='p-4 opacity-0 group-hover:opacity-100'>
-                        <span className='text-sm text-white'>
-                        A web application that uses Firebase as the database, integrates email as a communication tool, 
-                        and includes an admin web app for efficient management. 
-                        </span>
-                        <div className='pt-8 text-center'>
-                            <a href="https://github.com/bekstha/kasthamandap" target="blank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-md'> Code</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-  )
+              </div>
+              
+              {item.company && (
+                <p className="mt-1 text-lg font-Ovo dark:text-white">{item.company}</p>
+              )}
+              
+              {item.location && (
+                <p className="mt-2 text-sm italic font-Ovo dark:text-white">{item.location}</p>
+              )}
+              
+              <ul className="mt-4 space-y-2 text-gray-700">
+                {item.tasks.map((task, i) => (
+                  <li key={i} className="ml-4 list-disc font-Ovo text-lg dark:text-white">{task}</li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+  );
 }
 
-export default Experience
+export default Experience;
