@@ -1,116 +1,127 @@
-import React, {useState} from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
+import React, { useEffect, useRef, useState } from 'react';
+import arrowIcon from '../assets/arrow-icon.png';
+import arrow_icon_dark from '../assets/arrow-icon-dark.png';
+import bgheader from '../assets/header-bg-color.png';
+import moonIcon from '../assets/moon_icon.png';
+import sunIcon from '../assets/sun_icon.png';
+import menuWhite from '../assets/menu-white.png';
+import menuBlack from '../assets/menu-black.png';
+import closeWhite from '../assets/close-white.png';
+import closeBlack from '../assets/close-black.png';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs' 
-import Logo from '../assets/logo11.png'
-import {Link} from 'react-scroll'
-import CV from '../assets/CV.pdf'
 
-const Navbar = () => {
-    const [nav, setNav] = useState(false)
-    const handleClick  = () => setNav(!nav)
-  return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a2650] text-gray-300 z-10'>
-        <div>
-            <img src={Logo} alt='Logo' style={{width: '60px'}} />
+const Navbar = ({isDarkMode, setIsDarkMode}) => {
+    const [isScroll, setIsScroll] = useState(false);
+    const sideMenuRef = useRef();
+
+    const openMenu = () => {
+        sideMenuRef.current.style.transform = 'translateX(-16rem)'
+    }
+
+    const closeMenu = () => {
+        sideMenuRef.current.style.transform = 'translateX(16rem)'
+    }
+    useEffect (() => {
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 50){
+                setIsScroll(true)
+            }else {
+                setIsScroll(false)
+            }
+        })
+    }, [])
+
+    return (
+    <>
+    <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>
+        <img src={bgheader} alt='header-bg' className='w-full' />
+    </div>
+      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 
+        ${isScroll ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-md dark:bg-darkTheme dark:shadow-white/20' : ''}`}>
+                <a href='#' className='cursor-pointer'>
+                    <svg 
+                        width="180" 
+                        height="60" 
+                        viewBox="0 0 300 80" 
+                        className="name-svg"
+                        style={{ overflow: 'visible' }}
+                    >
+                        <text
+                            x="50%"
+                            y="50%"
+                            dominantBaseline="middle"
+                            textAnchor="middle"
+                            style={{
+                                fontFamily: "'Allura', cursive",
+                                fontSize: '4rem',
+                                fill: isDarkMode ? '#ffffff' : '#2F4F4F',
+                                fontWeight: 'normal',
+                                letterSpacing: '1px',
+                                transition: 'fill 0.3s ease'
+                            }}
+                        >
+                            Prabin.
+                        </text>
+                    </svg>
+                </a>
+        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full 
+            px-12 py-3 ${isScroll ? '' : 'bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent'}`}>
+            <li><a className='font-Ovo' href='#top'>Home</a></li>
+            <li><a className='font-Ovo' href='#about'>About</a></li>
+            <li><a className='font-Ovo' href='#projects'>Projects </a></li>
+            <li><a className='font-Ovo' href='#skills'>Skills</a></li>
+            <li><a className='font-Ovo' href='#experience'>Experience</a></li>
+            <li><a className='font-Ovo' href='#contact'>Contact Me</a></li>
+        </ul>
+        <div className='flex items-center gap-4'>
+            <button onClick={() => setIsDarkMode(prev => !prev)}>
+                <img src={isDarkMode ? sunIcon : moonIcon}  alt='MoonIcon' className='w-6'/>
+            </button>
+            <a href='#contact' className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500
+                rounded-full ml-4 font-Ovo dark:border-white/50'>
+                Contact 
+                <img src={ isDarkMode ? arrow_icon_dark : arrowIcon} alt='arrow' className='w-3' /> 
+            </a>
+            <button className='block md:hidden ml-3' onClick={openMenu}>
+                <img src={isDarkMode ? menuWhite : menuBlack}  alt='HamburgerMenu' className='w-6'/>
+            </button>
         </div>
 
-        {/* menu */}
-        <ul className='hidden md:flex sf-menu'>
-                <li>
-                    <Link className='navmenu' data-text="Home" to="home" smooth={true} duration={500}>
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link className='navmenu' data-text='About' to="about" smooth={true} duration={500}>
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link className='navmenu' data-text='Skills' to="skills" smooth={true} duration={500}>
-                        Skills
-                    </Link>
-                </li>
-                <li>
-                    <Link className='navmenu' data-text='Work' to="experience" smooth={true} duration={500}>
-                        Work
-                    </Link>
-                </li>
-                <li>
-                    <Link className='navmenu' data-text='Contact' to="contact" smooth={true} duration={500}>
-                        Contact
-                    </Link>
-                </li>
-            </ul>
-
-        {/* Hamburger */}
-        <div onClick={handleClick} className='md:hidden z-10'>
-            {!nav ? <FaBars /> : <FaTimes />}
-        </div>
-
-        {/* Mobile menu */}
-        <div className = {!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex felx-col justify-center items-center'}    >
-            <ul>
-                <li className='py-6 text-4xl'>
-                    <Link onClick={handleClick}  to="home" smooth={true} duration={500}>
-                        Home
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to="about" smooth={true} duration={500}>
-                        About
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-                        Skills
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to="experience" smooth={true} duration={500}>
-                        Work
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
-                        Contact
-                    </Link>
-                </li>
-            </ul>
-        </div>
-
-        {/* Social icons */}
-        <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+        {/* -- ----- Mobile Menu ----- -- */}
+        <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64
+            top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darkHover dark:text-white'>
+            <div className='absolute right-6 top-6' onClick={closeMenu}>
+                <img src={isDarkMode ? closeWhite : closeBlack} alt='CloseButton' className='w-5 cursor-pointer' />
+            </div>
+            <li><a className='font-Ovo' onClick={closeMenu} href='#top'>Home</a></li>
+            <li><a className='font-Ovo' onClick={closeMenu} href='#about'>About</a></li>
+            <li><a className='font-Ovo' onClick={closeMenu} href='#projects'>Projects </a></li>
+            <li><a className='font-Ovo' onClick={closeMenu} href='#skills'>Skills</a></li>
+            <li><a className='font-Ovo' onClick={closeMenu} href='#experience'>Experience</a></li>
+            <li><a className='font-Ovo' onClick={closeMenu} href='#contact'>Contact Me</a></li>
+        </ul>
+      </nav>
+              {/* Social icons */}
+        <div className='hidden lg:flex fixed flex-col top-[35%] left-0 '>
             <ul>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-500'>
-                    <a className='flex justify-between items-center w-full text-gray-300'
+                    <a className='flex justify-between items-center w-full text-white p-3 ml-3 font-Ovo'
                     href="https://www.linkedin.com/in/prabin-dhakal7/" target="blank">
                         LinkedIn <FaLinkedin size={30}/>
                     </a>
                 </li>
 
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-                    <a className='flex justify-between items-center w-full text-gray-300'
+                    <a className='flex justify-between items-center w-full text-white p-3 ml-3 font-Ovo'
                     href="https://github.com/Prabin1500" target="blank">
                         Github <FaGithub size={30}/>
                     </a>
                 </li>
 
-                <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-                    <a className='flex justify-between items-center w-full text-gray-300'
-                    href="mailto:dhakalprabin7@gmail.com">
-                        Email <HiOutlineMail size={30}/>
-                    </a>
-                </li>
-
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-                    <a className='flex justify-between items-center w-full text-gray-300'
-                    href={CV} type="application/pdf" target="blank">
+                    <a className='flex justify-between items-center w-full text-white p-3 ml-3 font-Ovo'
+                    href="/PrabinDhakalResume.pdf"  target="blank" rel="noopener noreferrer">
                         Resume <BsFillPersonLinesFill size={30}/>
                     </a>
 
@@ -118,7 +129,7 @@ const Navbar = () => {
             </ul>
             
         </div>
-    </div>
+    </>
   )
 }
 
