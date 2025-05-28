@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.92666382.css",
-    "main.js": "/Portfolio/static/js/main.650d78bc.js",
+    "main.css": "/Portfolio/static/css/main.921939d3.css",
+    "main.js": "/Portfolio/static/js/main.97d07253.js",
     "static/media/Kasthamandap.png": "/Portfolio/static/media/Kasthamandap.c3becedbe6ef5433c598.png",
     "static/media/Android_Studio.png": "/Portfolio/static/media/Android_Studio.8876e574b56d0e1bf4fb.png",
     "static/media/header-bg-color.png": "/Portfolio/static/media/header-bg-color.a4104773e65aebab69b6.png",
@@ -25,11 +25,11 @@
     "static/media/C++-Logo.png": "/Portfolio/static/media/C++-Logo.c80f0458d60a42c11110.png",
     "static/media/javascript.png": "/Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/Portfolio/index.html",
-    "main.92666382.css.map": "/Portfolio/static/css/main.92666382.css.map",
-    "main.650d78bc.js.map": "/Portfolio/static/js/main.650d78bc.js.map"
+    "main.921939d3.css.map": "/Portfolio/static/css/main.921939d3.css.map",
+    "main.97d07253.js.map": "/Portfolio/static/js/main.97d07253.js.map"
   },
   "entrypoints": [
-    "static/css/main.92666382.css",
-    "static/js/main.650d78bc.js"
+    "static/css/main.921939d3.css",
+    "static/js/main.97d07253.js"
   ]
 }
