@@ -1,7 +1,8 @@
 import { assets } from '../assets/assets';
 import { useState } from 'react';
 import { motion } from "framer-motion";
-import { FiMail, FiPhone, FiMapPin, FiClock } from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import { SocialIcon } from 'react-social-icons';
 
 const Contact = () => {
     const [result, setResult] = useState("");
@@ -35,7 +36,7 @@ const Contact = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             id='contact' 
-            className='w-full px-[5%] lg:px-[10%] py-20 mb-32 scroll-mt-20 dark:bg-none'
+            className='w-full px-[5%] lg:px-[10%] mb-32 py-16 lg:py-28 scroll-mt-20 dark:bg-none'
         >
             <div className='flex flex-col items-center justify-center mb-16'>
                 <motion.h2 
@@ -174,19 +175,30 @@ const Contact = () => {
                         <div className='mt-8 pt-6 border-t border-gray-200 dark:border-gray-700'>
                             <h4 className='font-medium text-gray-600 dark:text-gray-300 mb-3'>Connect with me</h4>
                             <div className='flex gap-4'>
-                                {['linkedin', 'github', 'twitter'].map((social) => (
-                                    <a 
-                                        key={social} 
-                                        href="#" 
-                                        className='p-2 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-orange-100 dark:hover:bg-[#08FDD8]/10 transition-colors'
-                                        aria-label={social}
+                                {[
+                                    { network: "github", url: "https://github.com/Prabin1500" },
+                                    { network: "linkedin", url: "https://linkedin.com/in/prabin-dhakal7/", bgColor: "#0075B5" },
+                                    { network: "instagram", url: "https://www.instagram.com/prabindhakal9/" }
+                                ].map((social, index) => (
+                                    <motion.a
+                                        key={social.network}
+                                        href={social.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ type: "spring", delay: index * 0.1 }}
+                                        whileHover={{ y: -5, scale: 1.1 }}
+                                        className="block"
                                     >
-                                        <img 
-                                            src={assets[`${social}_icon`]} 
-                                            alt={social} 
-                                            className='w-5 h-5 dark:invert'
+                                        <SocialIcon 
+                                        network={social.network}
+                                        bgColor={social.bgColor || null}
+                                        fgColor="#FFFFFF"
+                                        style={{ width: 40, height: 40 }}
+                                        className="hover:opacity-80 transition-opacity"
                                         />
-                                    </a>
+                                    </motion.a>
                                 ))}
                             </div>
                         </div>

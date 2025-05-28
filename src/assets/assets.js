@@ -151,6 +151,7 @@ export const workData = [
         tools: [assets.javaScript, assets.vscode, assets.html, assets.css],
         url: 'https://github.com/Prabin1500/Cinema',
         bgImage: assets.cinema,
+        liveUrl:'https://prabin155.netlify.app/',
     },
     {
         title: 'Restaurant Web App',

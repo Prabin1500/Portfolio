@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowCircleUp } from 'react-icons/fa';
 import { motion } from "framer-motion";
 
 const ScrollToTop = ({isDarkMode}) => {

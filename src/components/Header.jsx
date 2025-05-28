@@ -1,7 +1,7 @@
 import userImage from '../assets/UserImage.jpg'
 import handIcon from '../assets/hand-icon.png'
 import { motion } from "motion/react"
-import downloadIcon from '../assets/download-icon.png'
+import { TypeAnimation } from 'react-type-animation';
 import rightArrowWhite from '../assets/right-arrow-white.png'
 import resume from '../assets/Resume-prabin.pdf'
 import { useState } from 'react'
@@ -25,7 +25,7 @@ const Header = () => {
     };
 
   return (
-    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen scroll-mt-20 flex flex-col items-center justify-center gap-4'>
+    <div id='home' className='w-11/12 max-w-3xl text-center mx-auto h-screen scroll-mt-20 flex flex-col items-center justify-center gap-4'>
         <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
@@ -76,7 +76,20 @@ const Header = () => {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className='text-2xl sm:text-3xl lg:text-5xl font-bold font-Ovo my-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400'
             >
-                Full Stack Developer
+                <TypeAnimation
+                    sequence={[
+                    'Full Stack Developer',
+                    2000,
+                    'Software Developer',
+                    2000,
+                    ]}
+                    speed={500}
+                    wrapper="span"
+                    deletionSpeed={4000}
+                    cursor={true}
+                    repeat={Infinity}
+                    style={{ display: 'inline-block' }}
+                />
             </motion.h1>
         </motion.div>
         <motion.div
