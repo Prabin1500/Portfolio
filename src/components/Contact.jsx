@@ -1,10 +1,10 @@
-import { assets } from '../assets/assets';
+import { BsArrowRight } from 'react-icons/bs'; 
 import { useState } from 'react';
 import { motion } from "framer-motion";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import { SocialIcon } from 'react-social-icons';
 
-const Contact = () => {
+const Contact = ({isDarkMode}) => {
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
@@ -109,10 +109,10 @@ const Contact = () => {
                             whileTap={{ scale: 0.98 }}
                             transition={{ duration: 0.2 }}
                             type='submit' 
-                            className='py-3 px-8 w-full flex items-center justify-center gap-2 bg-gradient-to-r from-orange-400 to-orange-500 text-white rounded-lg hover:from-orange-500 hover:to-orange-600 transition-all shadow-lg dark:from-[#08FDD8] dark:to-[#00B4B4] dark:hover:from-[#00B4B4] dark:hover:to-[#08FDD8]'
+                            className='py-3 px-8 w-full flex items-center justify-center gap-2 bg-gradient-to-r from-orange-400 to-orange-500 text-white dark:text-black rounded-lg hover:from-orange-500 hover:to-orange-600 transition-all shadow-lg dark:from-[#08FDD8] dark:to-[#00B4B4] dark:hover:from-[#00B4B4] dark:hover:to-[#08FDD8]'
                         >
                             Send Message
-                            <img src={assets.right_arrow_white} alt='' className='w-4'/>
+                            <BsArrowRight  className={`w-4 ml-1 transition-all duration-300 hover:translate-x-1 ${isDarkMode ? 'text-black' : 'text-white'}`} />
                         </motion.button>
                         
                         {result && (

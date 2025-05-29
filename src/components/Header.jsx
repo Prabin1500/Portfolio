@@ -83,9 +83,7 @@ const Header = () => {
                     'Software Developer',
                     2000,
                     ]}
-                    speed={500}
                     wrapper="span"
-                    deletionSpeed={4000}
                     cursor={true}
                     repeat={Infinity}
                     style={{ display: 'inline-block' }}
